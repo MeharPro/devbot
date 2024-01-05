@@ -1,0 +1,2 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .cache/replit/modules/nodejs-19:v3-20230608-f4cd419","time":"2024-01-03T03:03:55Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .config/npm/node_global/bin/prettier","time":"2024-01-03T03:03:56Z"}

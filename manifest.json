@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "DevBot",
+  "version": "1.0",
+  "description": "Personalized Assistant",
+  "permissions": ["contextMenus", "activeTab"],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*", "*://outlook.live.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

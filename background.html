@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated Email Content</h1>
+    <div id="emailContent"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve the generated email content from the background page
+            chrome.runtime.getBackgroundPage(function (backgroundPage) {
+                const generatedEmail = backgroundPage.getGeneratedEmail();
+
+                // Display the generated email content in the popup
+                const emailContentElement = document.getElementById('emailContent');
+                emailContentElement.textContent = generatedEmail;
+            });
+        });
+    </script>
+</body>
+</html>
